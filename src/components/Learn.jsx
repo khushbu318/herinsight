@@ -25,6 +25,7 @@ const Learn = () => {
       name: 'Menstrual',
       days: 'Days 1–5 (approx.)',
       mood: 'Introspective',
+      energy: 'Low',
       shortDesc: 'Your body sheds its lining and resets. Energy naturally dips — rest is genuinely useful here.',
       overview: {
         title: "What's happening in your body",
@@ -59,6 +60,7 @@ const Learn = () => {
       name: 'Follicular',
       days: 'Days 6–13 (overlaps with period)',
       mood: 'Curious',
+      energy: 'Rising',
       shortDesc: 'Your body is preparing to release an egg. Energy starts to return and your mood often lifts.',
       overview: {
         title: "What's happening in your body",
@@ -93,6 +95,7 @@ const Learn = () => {
       name: 'Ovulation',
       days: 'Around Day 14 (±2 days)',
       mood: 'Confident',
+      energy: 'Peak',
       shortDesc: 'An egg is released. This is your fertile window and often when you feel your most energetic and sociable.',
       overview: {
         title: "What's happening in your body",
@@ -128,6 +131,7 @@ const Learn = () => {
       name: 'Luteal',
       days: 'Days 15–28 (approx.)',
       mood: 'Detail-focused',
+      energy: 'Declining',
       shortDesc: 'Your body prepares in case of pregnancy. If it doesn\'t happen, hormone levels drop and your period begins again.',
       overview: {
         title: "What's happening in your body",
@@ -249,6 +253,14 @@ const Learn = () => {
                       <div className="tab-content">
                         <h4>{phase.overview.title}</h4>
                         <p>{phase.overview.content}</p>
+                        
+                        <div className="energy-indicator">
+                          <div className="energy-label">⚡ Typical Energy Level</div>
+                          <div className="energy-bar-wrapper">
+                            <div className="energy-bar" data-level={phase.energy}></div>
+                            <span className="energy-text">{phase.energy}</span>
+                          </div>
+                        </div>
                         
                         <div className="trivia-section">
                           <h5>✨ Did you know?</h5>

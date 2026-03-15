@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Learn from './components/Learn';
 import Navigation from './components/Navigation';
+import TourGuide from './components/TourGuide';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="app" data-theme={isDarkTheme ? 'dark' : 'light'}>
+      <TourGuide />
       <header className="app-header">
         <div className="header-container">
           <div className="header-left">

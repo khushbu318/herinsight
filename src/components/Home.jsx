@@ -39,7 +39,7 @@ const Home = ({ setCurrentPage }) => {
           className="btn btn-secondary btn-large"
           onClick={() => setCurrentPage('learn')}
         >
-          Learn About Your Cycle
+          Learn About Cycle
         </button>
       </section>
 
