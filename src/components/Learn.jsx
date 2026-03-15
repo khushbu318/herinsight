@@ -48,6 +48,12 @@ const Learn = () => {
         'A warm compress or heat pad can ease cramps',
         'Warm drinks like ginger tea or raspberry leaf tea'
       ],
+      worksWell: [
+        '🛏️ Rest',
+        '🧘 Yin yoga',
+        '📖 Reading',
+        '🌿 Gentle walks'
+      ],
       notices: [
         'Bleeding that continues beyond 7 days',
         'Pain so strong it stops you doing daily things',
@@ -83,6 +89,13 @@ const Learn = () => {
         'Eat nutrient-dense foods to support the hormone rise',
         'Great time for planning and goal-setting'
       ],
+      worksWell: [
+        '🎯 Goal-setting',
+        '🤝 Social activities',
+        '💪 Strength training',
+        '🎨 Creative projects',
+        '🌟 Networking'
+      ],
       notices: [
         'Acne or skin breakouts (hormonal changes)',
         'Tender or swollen breasts (less common than luteal)',
@@ -117,6 +130,13 @@ const Learn = () => {
         'Social and romantic energy is high',
         'Good time for important meetings or public speaking',
         'Metabolism may be slightly elevated'
+      ],
+      worksWell: [
+        '🎤 Public speaking',
+        '👥 Social events',
+        '🏃 High-intensity exercise',
+        '🎯 Taking the lead',
+        '🌟 Sharing your ideas'
       ],
       notices: [
         'Mild pain or discomfort on one side (ovulation pain)',
@@ -154,6 +174,13 @@ const Learn = () => {
         'Magnesium-rich foods help with mood and muscle tension',
         'Journaling or quiet reflection in the later part',
         'Saying "no" to extra commitments is OK'
+      ],
+      worksWell: [
+        '💭 Introspection',
+        '✍️ Journaling',
+        '🧘 Meditation',
+        '🚫 Setting boundaries',
+        '🛌 Self-care'
       ],
       notices: [
         'Premenstrual symptoms in the second half: bloating, mood changes, low energy',
@@ -331,10 +358,9 @@ const Learn = () => {
                         <div className="wellbeing-note">
                           <h5>🌿 Works well this phase</h5>
                           <ul className="works-well-list">
-                            <li>💭 Introspection</li>
-                            <li>🌿 Nature walks</li>
-                            <li>✍️ Journaling</li>
-                            <li>🧘 Meditation</li>
+                            {phase.worksWell.map((activity, idx) => (
+                              <li key={idx}>{activity}</li>
+                            ))}
                           </ul>
                         </div>
                       </div>
