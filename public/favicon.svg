@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Circular background -->
+  <circle cx="50" cy="50" r="48" fill="#E88B97" opacity="0.1"/>
+  
+  <!-- Heart shape representing feminine wellness -->
+  <path d="M50,85 C50,85 15,60 15,40 C15,28 24,20 32,20 C38,20 44,24 50,30 C56,24 62,20 68,20 C76,20 85,28 85,40 C85,60 50,85 50,85 Z" 
+        fill="#E88B97" stroke="#C94C62" stroke-width="1.5"/>
+  
+  <!-- Small cycle indicator dots -->
+  <circle cx="35" cy="40" r="2.5" fill="#C94C62" opacity="0.6"/>
+  <circle cx="50" cy="32" r="2.5" fill="#C94C62" opacity="0.6"/>
+  <circle cx="65" cy="40" r="2.5" fill="#C94C62" opacity="0.6"/>
+</svg>
