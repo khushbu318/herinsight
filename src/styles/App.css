@@ -941,7 +941,8 @@
 
 /* Phase Preview Grid - Sticky Capsules */
 .phases-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
   position: sticky;
@@ -949,10 +950,6 @@
   background: var(--bg-light);
   padding: 1.5rem 0;
   z-index: 100;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  flex-wrap: nowrap;
 }
 
 .phase-preview-card {
@@ -964,12 +961,12 @@
   box-shadow: var(--shadow);
   border: 2px solid transparent;
   animation: slideInUp 0.5s ease-out;
-  white-space: nowrap;
-  flex-shrink: 0;
-  min-width: fit-content;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .phase-preview-card:hover {
@@ -987,8 +984,9 @@
 
 .phase-preview-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
 }
 
@@ -1682,11 +1680,24 @@
 
   .phase-preview-card {
     padding: 0.75rem 1.25rem;
+    white-space: wrap;
+    flex-shrink: 0;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.75rem;
+    text-align: left;
   }
 
-  .phase-detail-box {
-    border-radius: 12px;
+  .phase-preview-header {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0;
+    border-radius: 15px;
   }
+    
 
   .detail-header {
     padding: 1.5rem 1rem;
@@ -1768,11 +1779,12 @@
   .phases-grid {
     max-height: 100px;
     padding: 0.75rem 0;
+    justify-content: center;
   }
 
   .phase-preview-card {
-    padding: 0.5rem 1rem;
-    border-radius: 40px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 20px;
   }
 
   .phase-preview-header h3 {
